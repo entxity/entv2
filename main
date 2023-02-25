@@ -185,7 +185,7 @@ MainSection:AddToggle({
     Name = "Enabled",
     Value = false,
     Callback = function(New, Old)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = New and s or defaultWalkSpeed
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = New and game.Players.LocalPlayer.Character.Humanoid.WalkSpeed or defaultWalkSpeed
     end
 }).Default = false
 
@@ -197,10 +197,9 @@ MainSection:AddSlider({
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = New
     end,
     Min = 0,
-    Max = 100,
+    Max = 500,
     Decimals = 2
 }).Default = defaultWalkSpeed
-
 
 
 --// Aimbot Values
